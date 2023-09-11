@@ -1,0 +1,7 @@
+<ul>
+  <li><a href="https://example.com/new" target="_blank">Opens in New</a></li>
+  <li><a href="https://example.com/self" target="_self">Opens in Self</a></li>
+  <li><a href="https://example.com/parent" target="_parent">Opens in Parent</a></li>
+  <li><a href="https://example.com/body" target="_body">Opens in Body</a></li>
+  <li><a href="mailto:someone@example.com">Send email</a></li>
+</ul>
