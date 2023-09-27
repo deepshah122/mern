@@ -1,0 +1,40 @@
+// Get the name, email, website, and message from the image.
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const website = document.getElementById('website').value;
+const message = document.getElementById('message').value;
+
+// Validate the form data.
+if (name === '' || email === '' || message === '') {
+  alert('Please fill in all required fields.');
+  return;
+}
+
+// Create a new FormData object.
+const formData = new FormData();
+
+// Add the form data to the FormData object.
+formData.append('name', name);
+formData.append('email', email);
+formData.append('website', website);
+formData.append('message', message);
+
+// Send the form data to the server.
+fetch('/contact', {
+  method: 'POST',
+  body: formData,
+})
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response from the server.
+    if (data.success) {
+      alert('Your message has been sent successfully.');
+    } else {
+      alert('There was an error sending your message. Please try again later.');
+    }
+  })
+  .catch(error => {
+    // Handle any errors that occur.
+    console.error(error);
+    alert('There was an error sending your message. Please try again later.');
+  });
