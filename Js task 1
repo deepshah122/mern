@@ -1,0 +1,19 @@
+function reverseNumber(num) {
+  // Convert the number to a string.
+  const numString = num.toString();
+
+  // Split the string into an array of characters.
+  const numArray = numString.split('');
+
+  // Reverse the array.
+  numArray.reverse();
+
+  // Join the array back into a string.
+  const reversedNumString = numArray.join('');
+
+  // Convert the string back into a number.
+  const reversedNum = parseInt(reversedNumString);
+
+  // Return the reversed number.
+  return reversedNum;
+}
