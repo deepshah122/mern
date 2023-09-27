@@ -1,0 +1,39 @@
+// Get the username and password from the login form.
+const username = document.getElementById('username').value;
+const password = document.getElementById('password').value;
+
+// Validate the username and password.
+if (username === '' || password === '') {
+  alert('Please enter your username and password.');
+  return;
+}
+
+// Create a new FormData object.
+const formData = new FormData();
+
+// Add the username and password to the FormData object.
+formData.append('username', username);
+formData.append('password', password);
+
+// Send the login request to Instagram.
+fetch('https://api.instagram.com/oauth/access_token', {
+  method: 'POST',
+  body: formData,
+})
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response from Instagram.
+    if (data.access_token) {
+      // The login was successful. Save the access token and redirect the user to the home page.
+      localStorage.setItem('instagram_access_token', data.access_token);
+      window.location.href = '/home';
+    } else {
+      // The login failed. Display an error message to the user.
+      alert('There was an error logging in. Please try again later.');
+    }
+  })
+  .catch(error => {
+    // Handle any errors that occur.
+    console.error(error);
+    alert('There was an error logging in. Please try again later.');
+  });
