@@ -1,0 +1,43 @@
+// Get the elements from the webpage.
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const submitButton = document.getElementById('submit-button');
+
+// Add an event listener to the submit button.
+submitButton.addEventListener('click', function() {
+  // Validate the form data.
+  if (nameInput.value === '' || emailInput.value === '' || passwordInput.value === '') {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  // Create a new FormData object.
+  const formData = new FormData();
+
+  // Add the form data to the FormData object.
+  formData.append('name', nameInput.value);
+  formData.append('email', emailInput.value);
+  formData.append('password', passwordInput.value);
+
+  // Send the form data to the server.
+  fetch('/register', {
+    method: 'POST',
+    body: formData,
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response from the server.
+      if (data.success) {
+        alert('Your registration was successful. You can now log in to your account.');
+        window.location.href = '/login';
+      } else {
+        alert('There was an error registering your account. Please try again later.');
+      }
+    })
+    .catch(error => {
+      // Handle any errors that occur.
+      console.error(error);
+      alert('There was an error registering your account. Please try again later.');
+    });
+});
