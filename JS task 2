@@ -1,0 +1,13 @@
+function sortString(string) {
+  // Convert the string to an array of characters.
+  const stringArray = string.split('');
+
+  // Sort the array of characters in alphabetical order.
+  stringArray.sort();
+
+  // Join the array of characters back into a string.
+  const sortedString = stringArray.join('');
+
+  // Return the sorted string.
+  return sortedString;
+}
