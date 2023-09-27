@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction Company</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Construction Company</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Welcome to Construction Company!</h2>
+            <p>We are a full-service construction company that specializes in residential and commercial projects. We offer a wide range of services, from design and build to renovations and repairs. We are committed to providing our clients with the highest quality services and products at competitive prices.</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <img src="images/construction-site.jpg" alt="Construction site">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Construction Company was founded in 2000 by John Doe, a licensed contractor with over 20 years of experience in the construction industry. We are a team of dedicated professionals who are passionate about our work. We are committed to building strong relationships with our clients and to providing them with the best possible construction experience.</p>
+        <a href="#">Meet Our Team</a>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Residential Construction</li>
+          <li>Commercial Construction</li>
+          <li>Renovations</li>
+          <li>Repairs</li>
+          <li>Design and Build</li>
+          <li>Project Management</li>
+        </ul>
+        <a href="#">View All Services</a>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Please contact us today to discuss your construction needs.</p>
+        <form action="/contact" method="post">
+          <input type="text" name="name" placeholder="Your Name">
+          <input type="email" name="email" placeholder="Your Email">
+          <input type="text" name="phone" placeholder="Your Phone Number">
+          <textarea name="message" placeholder="Your Message"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023 Construction Company</p>
+  </footer>
+</body>
+</html>
