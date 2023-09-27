@@ -1,0 +1,19 @@
+// Create two variables to store the two numbers that the user will input.
+let num1;
+let num2;
+
+// Prompt the user to input the two numbers.
+num1 = prompt("Enter the first number: ");
+num2 = prompt("Enter the second number: ");
+
+// Store the user's input in the two variables.
+num1 = parseInt(num1);
+num2 = parseInt(num2);
+
+// Calculate the multiplication and division of the two numbers.
+let multiplication = num1 * num2;
+let division = num1 / num2;
+
+// Display the results to the user.
+console.log(`The multiplication of ${num1} and ${num2} is ${multiplication}.`);
+console.log(`The division of ${num1} and ${num2} is ${division}.`);
