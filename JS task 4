@@ -1,0 +1,25 @@
+// Get the date and time from the image.
+const dateString = '7/March/2023';
+const timeString = 'Tue Mar 07 2023 23:24:26 GMT+0530 (India Standard Time)';
+
+// Parse the date and time strings into Date objects.
+const date = new Date(dateString);
+const time = new Date(timeString);
+
+// Calculate the difference between the current time and the time in the image.
+const timeDifference = new Date() - time;
+
+// Convert the time difference to milliseconds.
+const milliseconds = timeDifference.getMilliseconds();
+
+// Convert the milliseconds to seconds.
+const seconds = milliseconds / 1000;
+
+// Convert the seconds to minutes.
+const minutes = seconds / 60;
+
+// Convert the minutes to hours.
+const hours = minutes / 60;
+
+// Display the results to the user.
+console.log(`The image was taken ${hours} hours ago.`);
